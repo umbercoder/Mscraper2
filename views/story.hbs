@@ -1,0 +1,24 @@
+{{#section 'styles'}}
+    <link rel="stylesheet" href="/css/style.css" />
+{{/section}}
+
+{{> nav}}
+
+<div class="jumbotron"></div>
+
+<div id="Story">
+    <div class="newStory">
+        <h3><a class="link" href="{{story.link}}" target="_blank">{{story.title}}</a></h3>
+    </div>
+    <form action="/stories/{{story._id}}" method="post">
+        <label for="body">Your Comment:</label>
+        <input type="text" name="body" id="body">
+        <button type="submit">Submit Comment</button>
+    </form>
+    {{#each story.comments}}
+        <p>
+
+            {{body}}
+        </p>
+    {{/each}}
+</div>

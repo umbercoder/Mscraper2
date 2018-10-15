@@ -1,0 +1,17 @@
+{{#section 'styles'}}
+    <link rel="stylesheet" href="/css/style.css" />
+{{/section}}
+
+{{> nav}}
+
+<div class="jumbotron2"></div>
+
+<div id="Story">
+    {{#each stories}}
+        <div class="newStory">
+            <p data-id="{{_id}}">
+                <h3><a href="/stories/{{_id}}" class="link">{{title}}</a></h3>
+            </p>
+        </div>
+    {{/each}}
+</div>
